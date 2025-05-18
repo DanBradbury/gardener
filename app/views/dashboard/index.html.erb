@@ -1,0 +1,84 @@
+<!-- Sidebar Navigation -->
+<nav>
+  <h2 class="nav-title">Garden Dashboard</h2>
+
+  <div class="nav-links">
+    <a href="/watering" class="nav-link">
+      <div class="nav-link-icon">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"></path>
+        </svg>
+      </div>
+      <span>Watering</span>
+    </a>
+
+    <a href="/crops" class="nav-link">
+      <div class="nav-link-icon">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M7 20h10"></path>
+          <path d="M10 20c5.5-2.5.8-6.4 3-10"></path>
+          <path d="M9.5 9.4c1.1.8 1.8 1.7 2.1 3.6"></path>
+          <path d="M14.1 6.5c-1 .4-1.9.8-2.2 1.6"></path>
+          <path d="M12 10c1.9.1 4.1 2.3 4 5"></path>
+        </svg>
+      </div>
+      <span>Crops</span>
+    </a>
+
+    <div class="garden-status">
+      <h3>Garden Status</h3>
+      <p>Last watered: Today, 8:00 AM</p>
+      <p>Plants needing attention: 3</p>
+    </div>
+  </div>
+</nav>
+
+<!-- Main Content Area -->
+<div class="content-area" data-controller="dashboard">
+  <!-- Weather Section -->
+  <div class="weather-section">
+    <h2 class="section-title">5-Day Weather Forecast</h2>
+    <div class="weather-cards" id="weather-forecast" data-dashboard-target="weatherForecast">
+      <!-- Weather cards will be inserted here by JavaScript -->
+    </div>
+  </div>
+
+  <!-- Garden Overview -->
+  <div class="garden-overview">
+    <h2 class="section-title">Garden Overview</h2>
+
+    <div class="overview-grid">
+      <div class="overview-card tasks-card">
+        <h3 class="card-title">Upcoming Tasks</h3>
+        <ul class="task-list">
+          <li class="task-item">
+            <span class="task-marker urgent"></span>
+            Water tomatoes (Today)
+          </li>
+          <li class="task-item">
+            <span class="task-marker medium"></span>
+            Harvest lettuce (Tomorrow)
+          </li>
+          <li class="task-item">
+            <span class="task-marker low"></span>
+            Plant new herbs (Wednesday)
+          </li>
+        </ul>
+      </div>
+
+      <div class="overview-card water-card">
+        <h3 class="card-title">Water Management</h3>
+        <div class="moisture-bar">
+          <span class="moisture-label">Soil Moisture:</span>
+          <div class="moisture-progress">
+            <div class="moisture-value" style="width: 65%"></div>
+          </div>
+        </div>
+        <div class="rain-forecast">
+          <span class="rain-label">Rain Forecast:</span>
+          <span class="rain-value">0.5" on Wednesday</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
